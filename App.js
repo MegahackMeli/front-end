@@ -2,9 +2,10 @@ import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
+import { Provider as PaperProvider } from "react-native-paper";
 import Home from "./src/views/home";
 import Login from "./src/views/login";
-import { Provider as PaperProvider } from "react-native-paper";
+import Cadastro from "./src/views/cadastro";
 
 const headerOptions = {
   headerStyle: {
@@ -32,6 +33,11 @@ export default function App() {
             name="Login"
             options={{ ...headerOptions, title: "Mercado+" }}
             component={Login}
+          />
+          <Stack.Screen
+            name="Cadastro"
+            options={{ ...headerOptions, title: "Cadastre-se" }}
+            component={Cadastro}
           />
         </Stack.Navigator>
       </NavigationContainer>

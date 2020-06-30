@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { View, Image, KeyboardAvoidingView } from "react-native";
 import { styles } from "./styles";
 import { TextInput, Button } from "react-native-paper";
-import { ScrollView } from "react-native-gesture-handler";
 import ImagemLogo from "../../images/logo.png";
 
-export default function Login() {
+export default function Login({ navigation }) {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
@@ -46,7 +45,7 @@ export default function Login() {
             ...styles.buttonCadastrar,
             ...styles.secondButton,
           }}
-          onPress={() => console.log("Pressed")}
+          onPress={() => navigation.navigate("Cadastro")}
         >
           Cadastrar
         </Button>
