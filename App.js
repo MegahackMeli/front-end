@@ -6,6 +6,7 @@ import { DefaultTheme, Provider as PaperProvider } from "react-native-paper";
 import Home from "./src/views/home";
 import Login from "./src/views/login";
 import Cadastro from "./src/views/cadastro";
+import AwesomeIcon from "react-native-vector-icons/FontAwesome";
 
 const headerOptions = {
   headerStyle: {
@@ -32,7 +33,12 @@ const theme = {
 
 export default function App() {
   return (
-    <PaperProvider theme={theme}>
+    <PaperProvider
+      theme={theme}
+      settings={{
+        icon: (props) => <AwesomeIcon {...props} />,
+      }}
+    >
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Login">
           <Stack.Screen
