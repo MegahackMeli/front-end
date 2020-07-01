@@ -2,7 +2,7 @@ import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import { Provider as PaperProvider } from "react-native-paper";
+import { DefaultTheme, Provider as PaperProvider } from "react-native-paper";
 import Home from "./src/views/home";
 import Login from "./src/views/login";
 import Cadastro from "./src/views/cadastro";
@@ -19,9 +19,20 @@ const headerOptions = {
 
 const Stack = createStackNavigator();
 
+/* Tema do Material */
+const theme = {
+  ...DefaultTheme,
+  roundness: 2,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: "#1D2C7C",
+    accent: "#0864EE",
+  },
+};
+
 export default function App() {
   return (
-    <PaperProvider>
+    <PaperProvider theme={theme}>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Login">
           <Stack.Screen

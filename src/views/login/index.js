@@ -20,6 +20,7 @@ export default function Login({ navigation }) {
         value={email}
         onChangeText={(eml) => setEmail(eml)}
         style={styles.form}
+        mode="outlined"
       />
 
       <TextInput
@@ -28,6 +29,7 @@ export default function Login({ navigation }) {
         onChangeText={(pwd) => setSenha(pwd)}
         style={styles.form}
         secureTextEntry
+        mode="outlined"
       />
 
       <View style={styles.containerButton}>
