@@ -7,6 +7,7 @@ import Home from "./src/views/home";
 import Login from "./src/views/login";
 import Cadastro from "./src/views/cadastro";
 import AwesomeIcon from "react-native-vector-icons/FontAwesome";
+import Dashboard from "./src/views/dashboard";
 
 const headerOptions = {
   headerStyle: {
@@ -40,7 +41,7 @@ export default function App() {
       }}
     >
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Login">
+        <Stack.Navigator initialRouteName="DashBorad">
           <Stack.Screen
             name="Home"
             options={{ ...headerOptions, title: "Painel do Afiliado" }}
@@ -55,6 +56,11 @@ export default function App() {
             name="Cadastro"
             options={{ ...headerOptions, title: "Cadastre-se" }}
             component={Cadastro}
+          />
+           <Stack.Screen
+            name="DashBorad"
+            options={{ ...headerOptions, title: "Dashboard de Afiliados" }}
+            component={Dashboard}
           />
         </Stack.Navigator>
       </NavigationContainer>
