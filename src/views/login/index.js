@@ -36,7 +36,7 @@ export default function Login({ navigation }) {
         <Button
           mode="contained"
           style={{ ...styles.form, ...styles.buttonAcessar }}
-          onPress={() => console.log("Pressed")}
+          onPress={() => navigation.navigate("Home")}
         >
           Acessar
         </Button>

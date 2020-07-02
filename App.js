@@ -43,7 +43,7 @@ export default function App() {
         <Stack.Navigator initialRouteName="Login">
           <Stack.Screen
             name="Home"
-            options={{ ...headerOptions }}
+            options={{ ...headerOptions, title: "Painel do Afiliado" }}
             component={Home}
           />
           <Stack.Screen
