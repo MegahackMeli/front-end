@@ -8,7 +8,10 @@ import SolicitacaoDeAfiliacaoImagem from "../../images/solicitacaoDeAfiliacao.pn
 
 export default function Home() {
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={styles.contentContainerStyle}
+    >
       <Card style={styles.card}>
         <Card.Cover source={ProdutosAfiliadosImagem} />
         <Card.Content>

@@ -6,7 +6,10 @@ export const styles = StyleSheet.create({
   },
   card: {
     width: "90%",
-    marginTop: 20,
+    marginTop: 25,
     alignSelf: "center",
+  },
+  contentContainerStyle: {
+    paddingBottom: 40,
   },
 });
