@@ -22,7 +22,6 @@ export const styles = StyleSheet.create({
 
   itensImagem: {
     alignItems: "center",
-    width: "100%",
     
   }
 
