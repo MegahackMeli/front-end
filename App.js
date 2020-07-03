@@ -6,6 +6,7 @@ import { DefaultTheme, Provider as PaperProvider } from "react-native-paper";
 import Home from "./src/views/home";
 import Login from "./src/views/login";
 import Cadastro from "./src/views/cadastro";
+import Afiliacoes from "./src/views/afiliacoes";
 import AwesomeIcon from "react-native-vector-icons/FontAwesome";
 
 const headerOptions = {
@@ -40,7 +41,7 @@ export default function App() {
       }}
     >
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Login">
+        <Stack.Navigator initialRouteName="Home">
           <Stack.Screen
             name="Home"
             options={{ ...headerOptions, title: "Painel do Afiliado" }}
@@ -55,6 +56,11 @@ export default function App() {
             name="Cadastro"
             options={{ ...headerOptions, title: "Cadastre-se" }}
             component={Cadastro}
+          />
+          <Stack.Screen
+            name="Afiliacoes"
+            options={{ ...headerOptions, title: "Afiliações" }}
+            component={Afiliacoes}
           />
         </Stack.Navigator>
       </NavigationContainer>
