@@ -4,6 +4,7 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { DefaultTheme, Provider as PaperProvider } from "react-native-paper";
 import Home from "./src/views/home";
+import Perfil from "./src/views/perfil";
 import Login from "./src/views/login";
 import Cadastro from "./src/views/cadastro";
 import AwesomeIcon from "react-native-vector-icons/FontAwesome";
@@ -40,7 +41,12 @@ export default function App() {
       }}
     >
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Login">
+        <Stack.Navigator initialRouteName="Perfil">
+          <Stack.Screen
+            name="Perfil"
+            options={{ ...headerOptions, title: "Perfil do Afiliado" }}
+            component={Perfil}
+          />
           <Stack.Screen
             name="Home"
             options={{ ...headerOptions, title: "Painel do Afiliado" }}
