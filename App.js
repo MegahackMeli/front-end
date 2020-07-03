@@ -6,6 +6,7 @@ import { DefaultTheme, Provider as PaperProvider } from "react-native-paper";
 import Home from "./src/views/home";
 import Login from "./src/views/login";
 import Cadastro from "./src/views/cadastro";
+import Afiliacoes from "./src/views/afiliacoes";
 import AwesomeIcon from "react-native-vector-icons/FontAwesome";
 import Dashboard from "./src/views/dashboard";
 import Estatistica from "./src/views/estatisitica";
@@ -42,7 +43,7 @@ export default function App() {
       }}
     >
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Estatistica">
+        <Stack.Navigator initialRouteName="Home">
           <Stack.Screen
             name="Home"
             options={{ ...headerOptions, title: "Painel do Afiliado" }}
@@ -67,6 +68,11 @@ export default function App() {
             name="Estatistica"
             options={{ ...headerOptions, title: "Estatistica" }}
             component={Estatistica}
+            />
+          <Stack.Screen
+            name="Afiliacoes"
+            options={{ ...headerOptions, title: "Afiliações" }}
+            component={Afiliacoes}
           />
         </Stack.Navigator>
       </NavigationContainer>

@@ -4,12 +4,18 @@ export const styles = StyleSheet.create({
   container: {
     backgroundColor: "#FFF159",
   },
+  contentContainerStyle: {
+    paddingBottom: 40,
+  },
   card: {
     width: "90%",
     marginTop: 25,
     alignSelf: "center",
   },
-  contentContainerStyle: {
-    paddingBottom: 40,
+  imagem: {
+    alignSelf: "center",
+  },
+  titulos: {
+    fontWeight: "bold",
   },
 });
