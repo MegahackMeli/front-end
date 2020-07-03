@@ -8,6 +8,8 @@ import Login from "./src/views/login";
 import Cadastro from "./src/views/cadastro";
 import Afiliacoes from "./src/views/afiliacoes";
 import AwesomeIcon from "react-native-vector-icons/FontAwesome";
+import Dashboard from "./src/views/dashboard";
+import Estatistica from "./src/views/estatisitica";
 
 const headerOptions = {
   headerStyle: {
@@ -57,6 +59,16 @@ export default function App() {
             options={{ ...headerOptions, title: "Cadastre-se" }}
             component={Cadastro}
           />
+          <Stack.Screen
+            name="DashBorad"
+            options={{ ...headerOptions, title: "Dashboard de Afiliados" }}
+            component={Dashboard}
+          />
+          <Stack.Screen
+            name="Estatistica"
+            options={{ ...headerOptions, title: "Estatistica" }}
+            component={Estatistica}
+            />
           <Stack.Screen
             name="Afiliacoes"
             options={{ ...headerOptions, title: "Afiliações" }}
