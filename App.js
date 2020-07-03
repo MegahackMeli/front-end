@@ -4,7 +4,8 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { DefaultTheme, Provider as PaperProvider } from "react-native-paper";
 import Home from "./src/views/home";
-import Perfil from "./src/views/perfil";
+import PerfilAfiliado from "./src/views/perfilAfiliado";
+import PerfilVendedor from "./src/views/perfilVendedor";
 import Login from "./src/views/login";
 import Cadastro from "./src/views/cadastro";
 import Afiliacoes from "./src/views/afiliacoes";
@@ -45,16 +46,21 @@ export default function App() {
       }}
     >
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Perfil">
+        <Stack.Navigator initialRouteName="PerfilVendedor">
           <Stack.Screen
             name="Ranking"
             options={{ ...headerOptions, title: "Ranking de Afiliados" }}
             component={Ranking}
           />
           <Stack.Screen
-            name="Perfil"
+            name="PerfilVendedor"
+            options={{ ...headerOptions, title: "Perfil do Vendedor" }}
+            component={PerfilVendedor}
+          />
+          <Stack.Screen
+            name="PerfilAfiliado"
             options={{ ...headerOptions, title: "Perfil do Afiliado" }}
-            component={Perfil}
+            component={PerfilAfiliado}
           />
           <Stack.Screen
             name="Home"
