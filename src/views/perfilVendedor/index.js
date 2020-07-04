@@ -4,67 +4,110 @@ import { styles } from "./styles";
 import { Text, Paragraph, Card, Title, DataTable } from "react-native-paper";
 import carlos from "../../images/carlos.png";
 
+import seach from "../../images/search.png";
+import caixa from "../../images/caixa.png";
+import pago from "../../images/pago.png";
+import add from "../../images/add.png";
+
+import friend from "../../images/friend.png";
+import StarRating from 'react-native-star-rating';
+
 export default function Perfil() {
+
+  
   return (
     <KeyboardAvoidingView
       style={styles.container}
       behavior={Platform.OS === "ios" ? "padding" : undefined}
     >
-      <View style={styles.space}>
-        <Image source={carlos} style={styles.imagem} />
-        <Text>Carlos Santos Menezes</Text>
+    <View style={styles.space}>
+      <Image source={carlos} style={styles.imagem} />
+    </View>
+    <Text style={styles.titleSize}>Carlos Santos Menezes</Text>
+    <View style={styles.viewRow}>
+    <StarRating
+      disabled={true}
+      maxStars={5}
+      rating={4.5}
+      fullStarColor={'#1D2C7C'}
+      starSize={25}
+    />
+    <Text style={styles.titleSize}>  4.5</Text>
+    </View>
+    <View style={styles.viewRow}>
+    <Card style={styles.card}>  
+        <View style={styles.notification}>
+        <Image source={add} style={styles.imgCard} />
+        </View>
+        <Card.Actions>
+        
+        <Paragraph style={styles.text}>Buscar Afiliados</Paragraph>
+        
+        </Card.Actions>
+        
+     
+    </Card>
+
+    <Card style={styles.card}>
+      <View style={styles.notification}>
+      <Image source={friend} style={styles.imgCard} />
       </View>
+      <Card.Actions>
+      
+      <Paragraph style={styles.text}>Meus     Afiliados</Paragraph>
+      </Card.Actions>
+    </Card>
 
-      <View style={styles.viewRow}>
-        <Card style={styles.card}>
-          <Card.Content>
-            <Paragraph>Buscar Afiliados</Paragraph>
-          </Card.Content>
-        </Card>
+    <Card style={styles.card}>
+        <View style={styles.notification}>
+        <Image source={seach} style={styles.imgCard} />
+        </View>
+        <Card.Actions>
+        
+        <Paragraph style={styles.text}>Estatísticas</Paragraph>
+        </Card.Actions>
+    </Card>
 
-        <Card style={styles.card}>
-          <Card.Content>
-            <Paragraph>Meus afiliados</Paragraph>
-          </Card.Content>
-        </Card>
+    </View>      
+    <View style={styles.viewRow}>
+    
+    <Card style={styles.card}>
+        <View style={styles.notification}>
+        <Image source={pago} style={styles.imgCardPago} />
+        </View>
 
-        <Card style={styles.card}>
-          <Card.Content>
-            <Paragraph>Estatísticas</Paragraph>
-          </Card.Content>
-        </Card>
-      </View>
-      <View style={styles.viewRow}>
-        <Card style={styles.card}>
-          <Card.Content>
-            <Paragraph>Finanças</Paragraph>
-          </Card.Content>
-        </Card>
+        <Card.Actions>
+        <Paragraph style={styles.text}>Finanças</Paragraph>
+        </Card.Actions>
+    </Card>
 
-        <Card style={styles.card}>
-          <Card.Content>
-            <Paragraph>Ver Produtos</Paragraph>
-          </Card.Content>
-        </Card>
-      </View>
-
-      <View style={styles.resumo}>
-        <Card>
-          <Card.Content>
-            <Title style={styles.titleSize}>
-              Estatísticas de afiliação - Resumo semanal
-            </Title>
-            <DataTable.Row>
-              <DataTable.Cell>0 solicitações de afiliação</DataTable.Cell>
-            </DataTable.Row>
-            <DataTable.Row>
-              <DataTable.Cell>
-                75 vendas concretizadas através dos afiliados
-              </DataTable.Cell>
-            </DataTable.Row>
-          </Card.Content>
-        </Card>
-      </View>
+    <Card style={styles.card}>
+        <View style={styles.notification}>
+        <Image source={caixa} style={styles.imgCard} />
+        </View>
+        <Card.Actions>
+        
+        <Paragraph style={styles.text}>Ver Produtos</Paragraph>
+        </Card.Actions>
+    </Card>
+    </View>
+     
+    <View style={styles.resumo}>
+    <Card>
+      <Card.Content>
+        <Title style={styles.titleSize}>Estatísticas de afiliação - Resumo semanal</Title>
+        <DataTable.Row>
+          <DataTable.Cell > <Paragraph style={styles.text}>0 solicitações de afiliação</Paragraph></DataTable.Cell>
+        </DataTable.Row>
+        <DataTable.Row>
+          <DataTable.Cell > <Paragraph style={styles.text}>75 vendas realizados através dos afiliados</Paragraph></DataTable.Cell>
+        </DataTable.Row>
+       
+      </Card.Content>
+    </Card> 
+    </View>
+      
     </KeyboardAvoidingView>
   );
 }
+

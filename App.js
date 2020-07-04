@@ -49,7 +49,7 @@ export default function App() {
       }}
     >
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="PerfilAfiliado">
+        <Stack.Navigator initialRouteName="PerfilVendedor">
           <Stack.Screen
             name="Ranking"
             options={{ ...headerOptions, title: "Ranking de Afiliados" }}
