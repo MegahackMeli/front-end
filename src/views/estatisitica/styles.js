@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { ScreenStackHeaderRightView } from "react-native-screens";
 
 export const styles = StyleSheet.create({
   container: {
@@ -46,9 +47,17 @@ export const styles = StyleSheet.create({
   itensImagem: {
     alignItems: "center",
   },
-
   imgSad: {
-    width: 40,
-    height: 40,
+    width: 65,
+    height: 65,
+    margin: 1,
+    marginTop: 27,
+    marginRight: 10,
+  },
+  imgRange: {
+    width: 115,
+    height: 130,
+    margin: 1,
+    marginRight: 10,
   },
 });

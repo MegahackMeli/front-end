@@ -14,36 +14,14 @@ export default function Perfil() {
       <View style={styles.resumo}>
         <Card>
           <Card.Content>
-            {/* <Image source={range} style={styles.imagem} /> */}
-
             <DataTable.Row>
-              <DataTable.Cell>
-                <Paragraph style={styles.titleSize}>
-                  2.000 visualizções
-                </Paragraph>
-              </DataTable.Cell>
-            </DataTable.Row>
-            <DataTable.Row>
-              <DataTable.Cell>
-                {" "}
-                <Paragraph style={styles.titleSize}>1.053 cliques</Paragraph>
-              </DataTable.Cell>
-            </DataTable.Row>
-            <DataTable.Row>
-              <DataTable.Cell>
-                {" "}
-                <Paragraph style={styles.titleSize}>
-                  647 na página de compra
-                </Paragraph>
-              </DataTable.Cell>
-            </DataTable.Row>
-            <DataTable.Row>
-              <DataTable.Cell>
-                {" "}
-                <Paragraph style={styles.titleSize}>
-                  240 compras com sucesso
-                </Paragraph>
-              </DataTable.Cell>
+              <Image source={range} style={styles.imgRange} />
+              <Paragraph style={styles.titleSize}>
+                2.000 visualizções{"\n "} {"\n "}
+                1.053 cliques {"\n "} {"\n "}
+                647 na página de compra {"\n "} {"\n "}
+                240 compras com {"\n "} sucesso
+              </Paragraph>
             </DataTable.Row>
           </Card.Content>
         </Card>
@@ -54,37 +32,28 @@ export default function Perfil() {
           <Card.Content>
             <Title style={styles.titleSize}>Afiliações</Title>
             <DataTable.Row>
-              <DataTable.Cell>
-                <Paragraph style={styles.titleSize}>
-                  3 produtos afiliados -
-                </Paragraph>
+              <Paragraph style={styles.titleSize}>
+                3 produtos afiliados -
                 <Paragraph style={styles.titlePara}>
-                  {" "}
-                  5 a menos que a semana anterior
+                  5 a menos que {"\n "} a semana anterior
                 </Paragraph>
-              </DataTable.Cell>
+              </Paragraph>
             </DataTable.Row>
             <DataTable.Row>
-              <DataTable.Cell>
-                <Paragraph style={styles.titleSize}>
-                  Vendas influenciadas 240
-                </Paragraph>
+              <Paragraph style={styles.titleSize}>
+                Vendas influenciadas 240
                 <Paragraph style={styles.titlePara1}>
-                  {" "}
                   - 3 a mais que a semana anterior
                 </Paragraph>
-              </DataTable.Cell>
+              </Paragraph>
             </DataTable.Row>
             <DataTable.Row>
-              <DataTable.Cell>
-                <Paragraph style={styles.titleSize}>
-                  Cliques em afiliados 1053
-                </Paragraph>
+              <Paragraph style={styles.titleSize}>
+                Cliques em afiliados 1053
                 <Paragraph style={styles.titlePara1}>
-                  {" "}
                   35% mais que a semana anterior
                 </Paragraph>
-              </DataTable.Cell>
+              </Paragraph>
             </DataTable.Row>
           </Card.Content>
         </Card>
@@ -94,15 +63,11 @@ export default function Perfil() {
         <Card>
           <Card.Content>
             <DataTable.Row>
-              <DataTable.Cell>
-                <Image source={sad} style={styles.imgSad} />
-              </DataTable.Cell>
-              <DataTable.Cell>
-                <Title style={styles.titleSize}>
-                  Ei ! parece que você tem poucos afiliados vá para pagina do
-                  MELI e associe-se a mais produtos
-                </Title>
-              </DataTable.Cell>
+              <Image source={sad} style={styles.imgSad} />
+              <Title style={styles.titleSize}>
+                Ei ! parece que você tem {"\n "} poucos afiliados vá {"\n "}
+                para pagina do MELI e {"\n "} associe-se a mais produtos
+              </Title>
             </DataTable.Row>
           </Card.Content>
         </Card>
