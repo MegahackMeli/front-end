@@ -14,7 +14,7 @@ export default function Login({ navigation }) {
       style={styles.container}
       behavior={Platform.OS === "ios" ? "padding" : undefined}
     >
-      <Image source={ImagemLogo} style={{ width: 300, height: 300 }} />
+      <Image source={ImagemLogo} />
 
       <TextInput
         label="Email"
