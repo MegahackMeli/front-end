@@ -41,15 +41,15 @@ export default function Perfil() {
             </DataTable.Row>
             <DataTable.Row>
               <Paragraph style={styles.titleSize}>
-                Vendas influenciadas 240
+                Vendas influenciadas 240 -
                 <Paragraph style={styles.titlePara1}>
-                  - 3 a mais que a semana anterior
+                  3 a mais que a semana anterior
                 </Paragraph>
               </Paragraph>
             </DataTable.Row>
             <DataTable.Row>
               <Paragraph style={styles.titleSize}>
-                Cliques em afiliados 1053
+                Cliques em afiliados 1053 -
                 <Paragraph style={styles.titlePara1}>
                   35% mais que a semana anterior
                 </Paragraph>
