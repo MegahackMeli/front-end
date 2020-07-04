@@ -39,7 +39,9 @@ export default function Perfil({ navigation }) {
         <Text style={styles.titleSize}> 4.5</Text>
       </View>
       <View style={styles.viewRow}>
-        <Card style={styles.card}>
+        <Card style={styles.card}
+          onPress={() => navigation.navigate("Ranking")}
+        >
           <View style={styles.notification}>
             <Image source={add} style={styles.imgCard} />
           </View>
@@ -48,12 +50,14 @@ export default function Perfil({ navigation }) {
           </Card.Actions>
         </Card>
 
-        <Card style={styles.card}>
+        <Card style={styles.card}
+          onPress={() => navigation.navigate("MeusAfiliados")}
+        >
           <View style={styles.notification}>
             <Image source={friend} style={styles.imgCard} />
           </View>
           <Card.Actions>
-            <Paragraph style={styles.text}>Meus Afiliados</Paragraph>
+            <Paragraph style={styles.text}>Meus   Afiliados</Paragraph>
           </Card.Actions>
         </Card>
 
@@ -82,7 +86,7 @@ export default function Perfil({ navigation }) {
             <Image source={caixa} style={styles.imgCard} />
           </View>
           <Card.Actions>
-            <Paragraph style={styles.text}>Ver Produtos</Paragraph>
+            <Paragraph style={styles.text}>Meus   Produtos</Paragraph>
           </Card.Actions>
         </Card>
       </View>

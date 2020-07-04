@@ -65,6 +65,6 @@ export const styles = StyleSheet.create({
   buttonSair: {
     width: "90%",
     marginTop: 40,
-    backgroundColor: "red",
+    color: "#1D2C7C"
   },
 });

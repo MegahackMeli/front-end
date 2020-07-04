@@ -38,8 +38,11 @@ export default function Perfil({ navigation }) {
         />
         <Text style={styles.titleSize}> 4.8</Text>
       </View>
+
       <View style={styles.viewRow}>
-        <Card style={styles.card}>
+        <Card style={styles.card}
+          onPress={() => navigation.navigate("Afiliacoes")}
+        >
           <View style={styles.notification}>
             <Image source={add} style={styles.imgCard} />
           </View>
@@ -48,7 +51,9 @@ export default function Perfil({ navigation }) {
           </Card.Actions>
         </Card>
 
-        <Card style={styles.card}>
+        <Card style={styles.card}
+          
+        >
           <View style={styles.notification}>
             <Image source={eye} style={styles.imgCard} />
           </View>
@@ -80,7 +85,9 @@ export default function Perfil({ navigation }) {
           </Card.Actions>
         </Card>
 
-        <Card style={styles.card}>
+        <Card style={styles.card}
+          onPress={() => navigation.navigate("Produtos")}
+        >
           <View style={styles.notification}>
             <Image source={caixa} style={styles.imgCard} />
           </View>
