@@ -12,18 +12,14 @@ export const styles = StyleSheet.create({
     width: "29%",
     marginTop: 25,
     alignSelf: "center",
-    marginHorizontal: 5
-    
+    marginHorizontal: 5,
   },
 
   viewRow: {
-    flexDirection: 'row'
-   },
+    flexDirection: "row",
+  },
 
   itensImagem: {
     alignItems: "center",
-    
-  }
-
-
+  },
 });

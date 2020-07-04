@@ -12,6 +12,8 @@ import AwesomeIcon from "react-native-vector-icons/FontAwesome";
 import Dashboard from "./src/views/dashboard";
 import Estatistica from "./src/views/estatisitica";
 import Ranking from "./src/views/ranking";
+import MeusAfiliados from "./src/views/meusAfiliados";
+import SolicitacaoAfiliacao from "./src/views/meusAfiliados/solicitacaoAfiliacao";
 
 const headerOptions = {
   headerStyle: {
@@ -45,7 +47,7 @@ export default function App() {
       }}
     >
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Perfil">
+        <Stack.Navigator initialRouteName="MeusAfiliados">
           <Stack.Screen
             name="Ranking"
             options={{ ...headerOptions, title: "Ranking de Afiliados" }}
@@ -80,11 +82,21 @@ export default function App() {
             name="Estatistica"
             options={{ ...headerOptions, title: "Estatistica" }}
             component={Estatistica}
-            />
+          />
           <Stack.Screen
             name="Afiliacoes"
             options={{ ...headerOptions, title: "Afiliações" }}
             component={Afiliacoes}
+          />
+          <Stack.Screen
+            name="MeusAfiliados"
+            options={{ ...headerOptions, title: "Meus Afiliados" }}
+            component={MeusAfiliados}
+          />
+          <Stack.Screen
+            name="SolicitacaoAfiliacao"
+            options={{ ...headerOptions, title: "Solicitações de afiliação" }}
+            component={SolicitacaoAfiliacao}
           />
         </Stack.Navigator>
       </NavigationContainer>
