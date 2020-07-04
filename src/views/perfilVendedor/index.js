@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Image, ScrollView } from "react-native";
+import { View, Image, ScrollView, Linking } from "react-native";
 import { styles } from "./styles";
 import {
   Text,
@@ -64,7 +64,10 @@ export default function Perfil({ navigation }) {
         </Card>
       </View>
       <View style={styles.viewRow}>
-        <Card style={styles.card}>
+        <Card
+          style={styles.card}
+          onPress={() => Linking.openURL("mercadopago://app")}
+        >
           <View style={styles.notification}>
             <Image source={pago} style={styles.imgCardPago} />
           </View>
