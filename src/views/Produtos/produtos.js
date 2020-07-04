@@ -10,7 +10,6 @@ export const produtos = [
     imagem:
       "https://www.casasbahia-imagens.com.br/Control/ArquivoExibir.aspx?IdArquivo=834386840",
   },
-  
   {
     nome: "Tableet Samsung Galaxy \nTab A 2019 SM-T295 8",
     valor: 1239.0,

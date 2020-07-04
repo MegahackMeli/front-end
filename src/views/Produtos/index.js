@@ -5,6 +5,7 @@ import { produtos } from "./produtos";
 import { styles } from "./styles";
 import share from "../../images/share.png";
 import StarRating from "react-native-star-rating";
+import Icon from "react-native-vector-icons/Fontisto";
 
 import {
   Avatar,
@@ -94,13 +95,12 @@ export default function Produto() {
               </Card.Content>
             </View>
             <View style={styles.viewRow}>
-           <Card.Content>
-            <Button mode="contained">
-            <Image source={share} style={styles.imagem}/>
-            </Button>
-            </Card.Content>
-            <Text style={styles.link}> {prod.link} </Text>
-
+              <Card.Content>
+                <Button style={styles.buttonShare} mode="contained">
+                  <Icon name="share" size={15} />
+                </Button>
+              </Card.Content>
+              <Text style={styles.link}> {prod.link} </Text>
             </View>
           </Card>
         ))}

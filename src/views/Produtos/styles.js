@@ -14,7 +14,6 @@ export const styles = StyleSheet.create({
     alignSelf: "center",
   },
   viewRow: {
-
     flexDirection: "row",
   },
   titleSize: {
@@ -26,10 +25,8 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignSelf: "center",
     fontSize: 10,
-    color: '#1D2C7C',
-    
+    color: "#1D2C7C",
   },
-  
 
   imagem: {
     width: 10,
@@ -37,8 +34,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     alignSelf: "center",
-    backgroundColor: '#1D2C7C'
-
+    backgroundColor: "#1D2C7C",
   },
   cover: {
     width: 110,
@@ -57,5 +53,8 @@ export const styles = StyleSheet.create({
   },
   scrollView: {
     marginTop: 15,
+  },
+  buttonShare: {
+    marginBottom: 5,
   },
 });
