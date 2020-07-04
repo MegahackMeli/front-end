@@ -15,18 +15,35 @@ export default function Perfil() {
         <Card>
           <Card.Content>
             {/* <Image source={range} style={styles.imagem} /> */}
-            <Title style={styles.titleSize}></Title>
+
             <DataTable.Row>
-              <DataTable.Cell>2.000 visualizções</DataTable.Cell>
+              <DataTable.Cell>
+                <Paragraph style={styles.titleSize}>
+                  2.000 visualizções
+                </Paragraph>
+              </DataTable.Cell>
             </DataTable.Row>
             <DataTable.Row>
-              <DataTable.Cell>1.053 cliques</DataTable.Cell>
+              <DataTable.Cell>
+                {" "}
+                <Paragraph style={styles.titleSize}>1.053 cliques</Paragraph>
+              </DataTable.Cell>
             </DataTable.Row>
             <DataTable.Row>
-              <DataTable.Cell> 647 na página de compra</DataTable.Cell>
+              <DataTable.Cell>
+                {" "}
+                <Paragraph style={styles.titleSize}>
+                  647 na página de compra
+                </Paragraph>
+              </DataTable.Cell>
             </DataTable.Row>
             <DataTable.Row>
-              <DataTable.Cell> 240 compras com sucesso</DataTable.Cell>
+              <DataTable.Cell>
+                {" "}
+                <Paragraph style={styles.titleSize}>
+                  240 compras com sucesso
+                </Paragraph>
+              </DataTable.Cell>
             </DataTable.Row>
           </Card.Content>
         </Card>
@@ -38,17 +55,35 @@ export default function Perfil() {
             <Title style={styles.titleSize}>Afiliações</Title>
             <DataTable.Row>
               <DataTable.Cell>
-                Total de afiliados 3 - 5 a menos que a semana anterior
+                <Paragraph style={styles.titleSize}>
+                  3 produtos afiliados -
+                </Paragraph>
+                <Paragraph style={styles.titlePara}>
+                  {" "}
+                  5 a menos que a semana anterior
+                </Paragraph>
               </DataTable.Cell>
             </DataTable.Row>
             <DataTable.Row>
               <DataTable.Cell>
-                Vendas influenciadas 240 - 3 a mais que a semana anterior
+                <Paragraph style={styles.titleSize}>
+                  Vendas influenciadas 240
+                </Paragraph>
+                <Paragraph style={styles.titlePara1}>
+                  {" "}
+                  - 3 a mais que a semana anterior
+                </Paragraph>
               </DataTable.Cell>
             </DataTable.Row>
             <DataTable.Row>
               <DataTable.Cell>
-                Cliques em afiliados 1053 - 35% mais que a semana anterior.
+                <Paragraph style={styles.titleSize}>
+                  Cliques em afiliados 1053
+                </Paragraph>
+                <Paragraph style={styles.titlePara1}>
+                  {" "}
+                  35% mais que a semana anterior
+                </Paragraph>
               </DataTable.Cell>
             </DataTable.Row>
           </Card.Content>
@@ -58,11 +93,17 @@ export default function Perfil() {
       <View style={styles.resumo}>
         <Card>
           <Card.Content>
-            <Image source={sad} style={styles.imagem} />
-            <Title style={styles.titleSize}>
-              Ei ! parece que você tem poucos afiliados vá para pagina do MELI e
-              associe-se a mais produtos
-            </Title>
+            <DataTable.Row>
+              <DataTable.Cell>
+                <Image source={sad} style={styles.imgSad} />
+              </DataTable.Cell>
+              <DataTable.Cell>
+                <Title style={styles.titleSize}>
+                  Ei ! parece que você tem poucos afiliados vá para pagina do
+                  MELI e associe-se a mais produtos
+                </Title>
+              </DataTable.Cell>
+            </DataTable.Row>
           </Card.Content>
         </Card>
       </View>

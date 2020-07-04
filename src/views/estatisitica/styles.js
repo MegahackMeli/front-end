@@ -22,7 +22,17 @@ export const styles = StyleSheet.create({
   },
 
   titleSize: {
-    fontSize: 16,
+    fontSize: 15,
+    color: "#1D2C7C",
+    fontWeight: "bold",
+  },
+  titlePara: {
+    fontSize: 15,
+    color: "#e01f09",
+  },
+  titlePara1: {
+    fontSize: 15,
+    color: "#09e054",
   },
 
   space: {
@@ -35,5 +45,10 @@ export const styles = StyleSheet.create({
 
   itensImagem: {
     alignItems: "center",
+  },
+
+  imgSad: {
+    width: 40,
+    height: 40,
   },
 });
