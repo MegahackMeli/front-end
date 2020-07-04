@@ -1,18 +1,33 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
+  scrollView: {
+    backgroundColor: "#FFF159",
+  },
+
   container: {
-    flex: 1,
     alignItems: "center",
-    justifyContent: "flex-start",
     backgroundColor: "#FFF159",
   },
 
   card: {
-    width: "29%",
+    width: "45%",
     marginTop: 10,
     alignSelf: "center",
     marginHorizontal: 5,
+    paddingTop: 10,
+    paddingRight: 10,
+    height: 60,
+  },
+
+  card2: {
+    width: "92%",
+    marginTop: 10,
+    alignSelf: "center",
+    marginHorizontal: 5,
+    paddingTop: 10,
+    paddingRight: 10,
+    height: 60,
   },
 
   backRating: {

@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     paddingBottom: 40,
   },
   card: {
-    width: "90%",
+    width: "95%",
     marginTop: 25,
     alignSelf: "center",
   },
@@ -41,6 +41,7 @@ export const styles = StyleSheet.create({
     height: 110,
     justifyContent: "center",
     alignSelf: "center",
+    marginLeft: 10,
   },
   titulos: {
     fontWeight: "bold",
