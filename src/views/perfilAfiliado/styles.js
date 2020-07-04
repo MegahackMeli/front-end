@@ -10,16 +10,36 @@ export const styles = StyleSheet.create({
 
   card: {
     width: "29%",
-    marginTop: 25,
+    marginTop: 10,
     alignSelf: "center",
     marginHorizontal: 5,
+ 
+    
   },
 
-  viewRow: {
-    flexDirection: "row",
+  resumo: {
+    width: "90%",
+    marginTop: 25,
+    alignSelf: "center",
+
   },
+
+  titleSize:{
+    fontSize: 16
+  },
+
+  space:{
+    marginTop:20
+  },
+  
+  viewRow: {
+    flexDirection: 'row'
+   },
 
   itensImagem: {
     alignItems: "center",
-  },
+    
+  }
+
+
 });

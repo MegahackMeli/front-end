@@ -39,7 +39,7 @@ export default function MeusAfiliados({ navigation }) {
                 <DataTable.Title>Link</DataTable.Title>
               </DataTable.Header>
               {x.produtos.map((y) => (
-                <DataTable.Row>
+                <DataTable.Row key={y.nome}>
                   <DataTable.Cell>{y.nome}</DataTable.Cell>
                   <DataTable.Cell>{y.link}</DataTable.Cell>
                 </DataTable.Row>
