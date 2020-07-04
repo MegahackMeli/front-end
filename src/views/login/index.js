@@ -3,6 +3,7 @@ import { View, Image, KeyboardAvoidingView } from "react-native";
 import { styles } from "./styles";
 import { TextInput, Button } from "react-native-paper";
 import ImagemLogo from "../../images/logo.png";
+import { StackActions } from "@react-navigation/native";
 
 export default function Login({ navigation }) {
   const [email, setEmail] = useState("");
@@ -36,9 +37,11 @@ export default function Login({ navigation }) {
         <Button
           mode="contained"
           style={{ ...styles.form, ...styles.buttonAcessar }}
-          onPress={() => navigation.navigate("Home")}
+          onPress={() =>
+            navigation.dispatch(StackActions.replace("PerfilAfiliado"))
+          }
         >
-          Acessar
+          Afiliado
         </Button>
         <Button
           mode="contained"
@@ -47,9 +50,11 @@ export default function Login({ navigation }) {
             ...styles.buttonCadastrar,
             ...styles.secondButton,
           }}
-          onPress={() => navigation.navigate("Cadastro")}
+          onPress={() =>
+            navigation.dispatch(StackActions.replace("PerfilVendedor"))
+          }
         >
-          Cadastrar
+          Vendedor
         </Button>
       </View>
     </KeyboardAvoidingView>

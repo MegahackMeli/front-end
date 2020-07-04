@@ -49,7 +49,8 @@ export default function App() {
       }}
     >
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Produtos">
+
+        <Stack.Navigator initialRouteName="Login">
           <Stack.Screen
             name="Ranking"
             options={{ ...headerOptions, title: "Ranking de Afiliados" }}

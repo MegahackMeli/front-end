@@ -6,7 +6,6 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "flex-start",
     backgroundColor: "#FFF159",
-    
   },
 
   card: {
@@ -14,10 +13,9 @@ export const styles = StyleSheet.create({
     marginTop: 10,
     alignSelf: "center",
     marginHorizontal: 5,
- 
   },
 
-  backRating:{
+  backRating: {
     backgroundColor: "#FFF159",
   },
 
@@ -25,46 +23,48 @@ export const styles = StyleSheet.create({
     width: "90%",
     marginTop: 25,
     alignSelf: "center",
-
   },
-  text:{
-    color: '#1D2C7C'
+  text: {
+    color: "#1D2C7C",
   },
 
-  titleSize:{
+  titleSize: {
     fontSize: 15,
-    color: '#1D2C7C',
-    fontWeight: 'bold'
-
+    color: "#1D2C7C",
+    fontWeight: "bold",
   },
 
-  space:{
-    marginTop:10
+  space: {
+    marginTop: 10,
   },
-  
+
   viewRow: {
-    flexDirection: 'row'
-   },
+    flexDirection: "row",
+  },
 
   itensImagem: {
     alignItems: "center",
     justifyContent: "center",
-    
   },
 
   imgCard: {
     width: 25,
-    height:25,
+    height: 25,
   },
 
   imgCardPago: {
     width: 45,
-    height:40,
+    height: 40,
   },
 
   notification: {
-    position: 'absolute',
-    right: 0
+    position: "absolute",
+    right: 0,
   },
- 
+
+  buttonSair: {
+    width: "90%",
+    marginTop: 40,
+    backgroundColor: "red",
+  },
 });
