@@ -19,6 +19,8 @@ export const styles = StyleSheet.create({
     flexDirection: 'row'
    },
 
+ 
+
    titleSize:{
     fontSize: 18,
     color: '#1D2C7C',
@@ -30,12 +32,18 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignSelf: "center",
     fontSize: 10,
-    color: '#1D2C7C'
+    color: '#1D2C7C',
+    
   },
+  
 
   imagem: {
-    width: 15,
-    height: 15
+    width: 10,
+    height: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+    backgroundColor: '#1D2C7C'
   },
 
   cover: {

@@ -53,8 +53,8 @@ export const styles = StyleSheet.create({
   },
 
   imgCardPago: {
-    width: 45,
-    height: 40,
+    width: 48,
+    height: 45,
   },
 
   notification: {

@@ -63,11 +63,11 @@ export default function Produto() {
             </Card.Content>
             </View>
             <View style={styles.viewRow}>
-            <Card.Actions>
-              <Button mode="contained">
-              Copiar
-              </Button>
-            </Card.Actions>
+           <Card.Content>
+            <Button mode="contained">
+            <Image source={share} style={styles.imagem}/>
+            </Button>
+            </Card.Content>
             <Text style={styles.link}> {prod.link} </Text>
             </View>
           </Card>
