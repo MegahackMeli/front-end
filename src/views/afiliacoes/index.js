@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { View, Text, ScrollView, Image } from "react-native";
 import { produtos } from "./produtos";
 import { styles } from "./styles";
-import ModalAceiteImagem from "../../images/modalAceite.png";
+import share from "../../images/share.png";
+import StarRating from 'react-native-star-rating';
+
 import {
   Avatar,
   Card,
@@ -12,71 +14,62 @@ import {
   Dialog,
   Portal,
 } from "react-native-paper";
+
 export default function Afiliacoes() {
-  const [visible, setVisible] = useState(false);
-
-  const showDialog = () => setVisible(true);
-
-  const hideDialog = () => setVisible(false);
-
-  const dialogRender = (
-    <View>
-      <Portal>
-        <Dialog visible={visible} onDismiss={hideDialog}>
-          <Dialog.Title>Parabéns</Dialog.Title>
-          <Dialog.Content>
-            <Image source={ModalAceiteImagem} style={styles.imagem} />
-            <Paragraph>
-              {"\n"}
-              Solicitação de afiliação, acompanhe a resposta do vendedor através
-              do painel de solicitações!
-            </Paragraph>
-          </Dialog.Content>
-          <Dialog.Actions>
-            <Button onPress={hideDialog}>Ok</Button>
-          </Dialog.Actions>
-        </Dialog>
-      </Portal>
-    </View>
-  );
 
   return (
     <>
-      {dialogRender}
+      
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainerStyle}
       >
         {produtos.map((prod) => (
           <Card style={styles.card} key={prod.nome}>
+            <View style={styles.viewRow}>
             <Card.Cover
               source={{
-                uri: prod.imagem, 
+                uri: prod.imagem
               }} style={styles.cover}
             />
             <Card.Content>
-              <Title>{prod.nome}</Title>
+              <Title style={styles.titleSize}>{prod.nome}</Title>
               <Paragraph>
-                <Text style={styles.titulos}>Preço do Produto:</Text> R${" "}
-                {prod.valor}
+                <Text style={styles.titulos}>Preço: <Text style={{fontWeight: 'normal'}}>{prod.valor} R$</Text></Text> 
+                
               </Paragraph>
               <Paragraph>
-                <Text style={styles.titulos}>Valor da comissão:</Text> R${" "}
-                {prod.valorComissao}
+                <Text style={styles.titulos}>Comissão: <Text style={{fontWeight: 'normal'}}>{prod.valorComissao}% p/venda</Text>
+                </Text> 
+                
               </Paragraph>
               <Paragraph>
-                <Text style={styles.titulos}>Vendedor:</Text>{" "}
-                {prod.nomeVendedor}
+                <Text style={styles.titulos}>Em estoque: <Text style={{fontWeight: 'normal'}}>{prod.estoque}</Text></Text> 
+                
               </Paragraph>
               <Paragraph>
-                <Text style={styles.titulos}>Rating:</Text> {prod.rating}
+                <Text style={styles.titulos}>Vendedor: <Text style={{fontWeight: 'normal'}}>{prod.nomeVendedor}</Text></Text>
+
               </Paragraph>
+              <View style={styles.viewRow}>
+              <StarRating
+                disabled={true}
+                maxStars={5}
+                rating={prod.rating}
+                fullStarColor={'#1D2C7C'}
+                starSize={25}
+              />
+              <Text style={{color: '#1D2C7C'}}>  {prod.rating}</Text>
+              </View>
             </Card.Content>
+            </View>
+            
             <Card.Actions>
-              <Button mode="contained" onPress={showDialog}>
-                Afiliar-se
+              <Button mode="contained">
+              Afiliar-se
               </Button>
             </Card.Actions>
+            
           </Card>
         ))}
       </ScrollView>
