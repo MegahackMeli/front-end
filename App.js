@@ -12,7 +12,7 @@ import Afiliacoes from "./src/views/afiliacoes";
 import Produtos from "./src/views/Produtos";
 import AwesomeIcon from "react-native-vector-icons/FontAwesome";
 import Dashboard from "./src/views/dashboard";
-import Estatistica from "./src/views/estatisitica";
+import Estatisticas from "./src/views/estatisitica";
 import Ranking from "./src/views/ranking";
 import MeusAfiliados from "./src/views/meusAfiliados";
 import SolicitacaoAfiliacao from "./src/views/meusAfiliados/solicitacaoAfiliacao";
@@ -49,7 +49,7 @@ export default function App() {
       }}
     >
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="MeusAfiliados">
+        <Stack.Navigator initialRouteName="Estatisticas">
           <Stack.Screen
             name="Ranking"
             options={{ ...headerOptions, title: "Ranking de Afiliados" }}
@@ -91,9 +91,9 @@ export default function App() {
             component={Dashboard}
           />
           <Stack.Screen
-            name="Estatistica"
-            options={{ ...headerOptions, title: "Estatistica" }}
-            component={Estatistica}
+            name="Estatisticas"
+            options={{ ...headerOptions, title: "Estatisticas" }}
+            component={Estatisticas}
           />
           <Stack.Screen
             name="Afiliacoes"
