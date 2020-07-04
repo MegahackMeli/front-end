@@ -26,4 +26,8 @@ export const styles = StyleSheet.create({
   secondButton: {
     marginLeft: "3%",
   },
+
+  text:{
+    color: '#1D2C7C'
+  },
 });

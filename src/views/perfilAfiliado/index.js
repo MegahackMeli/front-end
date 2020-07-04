@@ -86,7 +86,7 @@ export default function Perfil() {
         </View>
         <Card.Actions>
         
-        <Paragraph style={styles.text}>Ver Produtos</Paragraph>
+        <Paragraph style={styles.text}>Meus   Produtos</Paragraph>
         </Card.Actions>
     </Card>
     </View>

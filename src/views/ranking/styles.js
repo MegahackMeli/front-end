@@ -11,9 +11,21 @@ export const styles = StyleSheet.create({
     alignSelf: "center",
     alignItems: "center",
     justifyContent: "center",
+    
   },
   contentContainerStyle: {
     paddingBottom: 10,
+  },
+
+  title:{
+    fontSize: 22,
+    color: '#1D2C7C',
+    fontWeight: 'bold'
+  },
+
+  paragraph:{
+    fontSize: 15,
+    color: '#1D2C7C'
   },
 
   itensImagem: {
@@ -40,4 +52,6 @@ export const styles = StyleSheet.create({
     width: 25,
     height: 25,
   },
+
+  
 });

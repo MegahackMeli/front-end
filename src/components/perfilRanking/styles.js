@@ -22,6 +22,10 @@ export const styles = StyleSheet.create({
 
   titulos: {
     fontWeight: "bold",
-  }
+  },
   
+  text:{
+    fontSize: 15,
+    color: '#1D2C7C'
+  },
 });

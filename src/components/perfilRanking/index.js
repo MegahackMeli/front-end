@@ -2,7 +2,7 @@ import React from "react";
 import { styles } from "./styles";
 import { Card, Paragraph } from "react-native-paper";
 import { ScrollView, View, Image } from "react-native";
-import luisa from "../../images/luisa.png";
+import StarRating from 'react-native-star-rating';
 
 export default function PerfilRank({img, vendas, nome, rating}) {
   return (
@@ -13,12 +13,18 @@ export default function PerfilRank({img, vendas, nome, rating}) {
         
         <Card.Content style={styles.cardContent}>
           <View>
-            <Image source={luisa} style={styles.tinyLogo} />
+            <Image source={img} style={styles.tinyLogo} />
           </View>
           <View>
-            <Paragraph>{nome}</Paragraph>
-            <Paragraph>{vendas}</Paragraph>
-            <Paragraph style={styles.titulos}>Rating: {rating}</Paragraph>
+            <Paragraph style={styles.text}>{nome}</Paragraph>
+            <Paragraph style={styles.text}>{vendas}</Paragraph>
+            <StarRating
+              disabled={true}
+              maxStars={5}
+              rating={rating}
+              fullStarColor={'#1D2C7C'}
+              starSize={25}
+            />
           </View>
         </Card.Content>
         

@@ -15,8 +15,8 @@ export default function Ranking() {
     >
       <View style={styles.text}>
         <Image source={Podium} style={styles.itensImagem} />
-        <Title>Ranking de Afiliados</Title>
-        <Paragraph>Veja os melhores afiliados da nossa plataforma e peça a eles para divulgar o seu produto !</Paragraph>
+        <Title style={styles.title}>Ranking de Afiliados</Title>
+        <Paragraph style={styles.paragraph}>Veja os melhores afiliados da nossa plataforma e peça a eles para divulgar o seu produto!</Paragraph>
       </View>
       
       <Card style={styles.card}>
@@ -30,10 +30,10 @@ export default function Ranking() {
         </Card.Actions>
         
       </Card>
-      <PerfilRank img={luisa} nome={"Luísa Moraes Lopes"} vendas={"33 vendas afiliadas"} rating={"4.8"}/> 
-      <PerfilRank img={luisa} nome={"Luísa Moraes Lopes"} vendas={"30 vendas afiliadas"} rating={"4.9"}/> 
-      <PerfilRank img={luisa} nome={"Luísa Moraes Lopes"} vendas={"28 vendas afiliadas"} rating={"4.5"}/> 
-      <PerfilRank img={luisa} nome={"Luísa Moraes Lopes"} vendas={"20 vendas afiliadas"} rating={"4.0"}/> 
+      <PerfilRank img={luisa} nome={"Luísa Moraes Lopes"} vendas={"33 vendas afiliadas"} rating={4.8}/> 
+      <PerfilRank img={luisa} nome={"Luísa Moraes Lopes"} vendas={"30 vendas afiliadas"} rating={4.9}/> 
+      <PerfilRank img={luisa} nome={"Luísa Moraes Lopes"} vendas={"28 vendas afiliadas"} rating={4.5}/> 
+      <PerfilRank img={luisa} nome={"Luísa Moraes Lopes"} vendas={"20 vendas afiliadas"} rating={4.0}/> 
       
     </ScrollView>
   );
