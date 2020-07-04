@@ -13,33 +13,27 @@ export const styles = StyleSheet.create({
     marginTop: 10,
     alignSelf: "center",
     marginHorizontal: 5,
- 
-    
   },
 
-  space:{
-    marginTop:20
+  space: {
+    marginTop: 20,
   },
 
   resumo: {
     width: "90%",
     marginTop: 25,
     alignSelf: "center",
-
   },
 
-  titleSize:{
-    fontSize: 16
+  titleSize: {
+    fontSize: 16,
   },
 
   viewRow: {
-    flexDirection: 'row'
-   },
+    flexDirection: "row",
+  },
 
   itensImagem: {
     alignItems: "center",
-    
-  }
-
-
+  },
 });
