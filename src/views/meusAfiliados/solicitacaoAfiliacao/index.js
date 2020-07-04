@@ -1,10 +1,18 @@
 import React, { useState } from "react";
 import { View, Text, ScrollView, Image } from "react-native";
-import { Card, Button, Portal, Dialog, Paragraph } from "react-native-paper";
+import {
+  Card,
+  Button,
+  Portal,
+  Dialog,
+  Paragraph,
+  DataTable,
+} from "react-native-paper";
 import { styles } from "./styles";
 import { data } from "../afiliados";
 import ImagemLuisa from "../../../images/luisa.png";
 import ImagemSucesso from "../../../images/sucesso.png";
+import range from "../../../images/range.png";
 
 export default function SolicitacaoAfiliacao() {
   const { solicitacoes } = data;
@@ -57,15 +65,19 @@ export default function SolicitacaoAfiliacao() {
                 <Text>{x.mensagem}</Text>
               </View>
               <View style={styles.containerCards}>
-                <Card style={styles.cardAmarelo}>
+                <Card style={styles.cardAmarelo1}>
                   <Card.Content>
-                    <Text>{x.vendasInfluenciadas} Vendas influênciadas</Text>
+                    <Text style={styles.titleSize}>
+                      {x.vendasInfluenciadas} Vendas influênciadas
+                    </Text>
                   </Card.Content>
                 </Card>
 
-                <Card style={styles.cardAmarelo}>
+                <Card style={styles.cardAmarelo2}>
                   <Card.Content>
-                    <Text>{x.acessos} Links acessados</Text>
+                    <Text style={styles.titleSize}>
+                      {x.acessos} Links acessados
+                    </Text>
                   </Card.Content>
                 </Card>
               </View>
@@ -76,6 +88,21 @@ export default function SolicitacaoAfiliacao() {
             </Card.Actions>
           </Card>
         ))}
+        <View style={styles.resumo}>
+          <Card>
+            <Card.Content>
+              <DataTable.Row>
+                <Image source={range} style={styles.imgRange} />
+                <Paragraph style={styles.titleSize}>
+                  2.000 visualizções{"\n "} {"\n "}
+                  1.053 cliques {"\n "} {"\n "}
+                  647 na página de compra {"\n "} {"\n "}
+                  240 compras com {"\n "} sucesso
+                </Paragraph>
+              </DataTable.Row>
+            </Card.Content>
+          </Card>
+        </View>
       </ScrollView>
     </>
   );

@@ -24,8 +24,17 @@ export const styles = StyleSheet.create({
   header: {
     marginTop: 15,
   },
-  cardAmarelo: {
+  cardAmarelo1: {
     width: "45%",
+    marginRight: 10,
+    marginLeft: -15,
+    backgroundColor: "#FFF159",
+  },
+  cardAmarelo2: {
+    width: "45%",
+    marginLeft: 15,
+    // marginRight: 40,
+    backgroundColor: "#FFF159",
   },
   containerCards: {
     flexDirection: "row",
@@ -36,6 +45,22 @@ export const styles = StyleSheet.create({
     marginTop: 20,
   },
   center: {
+    alignSelf: "center",
+  },
+  imgRange: {
+    width: 115,
+    height: 130,
+    margin: 1,
+    marginRight: 10,
+  },
+  titleSize: {
+    fontSize: 15,
+    color: "#1D2C7C",
+    fontWeight: "bold",
+  },
+  resumo: {
+    width: "90%",
+    marginTop: 25,
     alignSelf: "center",
   },
 });
