@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Text, ScrollView, Image } from "react-native";
 import { produtos } from "./produtos";
 import { styles } from "./styles";
-import ModalAceiteImagem from "../../images/modalAceite.png";
+import share from "../../images/share.png";
 import {
   Avatar,
   Card,
@@ -12,37 +12,11 @@ import {
   Dialog,
   Portal,
 } from "react-native-paper";
-export default function Afiliacoes() {
-  const [visible, setVisible] = useState(false);
-
-  const showDialog = () => setVisible(true);
-
-  const hideDialog = () => setVisible(false);
-
-  const dialogRender = (
-    <View>
-      <Portal>
-        <Dialog visible={visible} onDismiss={hideDialog}>
-          <Dialog.Title>Parabéns</Dialog.Title>
-          <Dialog.Content>
-            <Image source={ModalAceiteImagem} style={styles.imagem} />
-            <Paragraph>
-              {"\n"}
-              Solicitação de afiliação, acompanhe a resposta do vendedor através
-              do painel de solicitações!
-            </Paragraph>
-          </Dialog.Content>
-          <Dialog.Actions>
-            <Button onPress={hideDialog}>Ok</Button>
-          </Dialog.Actions>
-        </Dialog>
-      </Portal>
-    </View>
-  );
+export default function Produto() {
 
   return (
     <>
-      {dialogRender}
+      
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainerStyle}
@@ -51,7 +25,7 @@ export default function Afiliacoes() {
           <Card style={styles.card} key={prod.nome}>
             <Card.Cover
               source={{
-                uri: prod.imagem, 
+                uri: prod.imagem
               }} style={styles.cover}
             />
             <Card.Content>
@@ -65,6 +39,10 @@ export default function Afiliacoes() {
                 {prod.valorComissao}
               </Paragraph>
               <Paragraph>
+                <Text style={styles.titulos}>Em estoque:</Text> {" "}
+                {prod.estoque}
+              </Paragraph>
+              <Paragraph>
                 <Text style={styles.titulos}>Vendedor:</Text>{" "}
                 {prod.nomeVendedor}
               </Paragraph>
@@ -73,8 +51,8 @@ export default function Afiliacoes() {
               </Paragraph>
             </Card.Content>
             <Card.Actions>
-              <Button mode="contained" onPress={showDialog}>
-                Afiliar-se
+              <Button mode="contained">
+              Link de Afiliado
               </Button>
             </Card.Actions>
           </Card>

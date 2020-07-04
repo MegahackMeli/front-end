@@ -9,6 +9,7 @@ import PerfilVendedor from "./src/views/perfilVendedor";
 import Login from "./src/views/login";
 import Cadastro from "./src/views/cadastro";
 import Afiliacoes from "./src/views/afiliacoes";
+import Produtos from "./src/views/Produtos";
 import AwesomeIcon from "react-native-vector-icons/FontAwesome";
 import Dashboard from "./src/views/dashboard";
 import Estatistica from "./src/views/estatisitica";
@@ -46,7 +47,7 @@ export default function App() {
       }}
     >
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="PerfilVendedor">
+        <Stack.Navigator initialRouteName="Produtos">
           <Stack.Screen
             name="Ranking"
             options={{ ...headerOptions, title: "Ranking de Afiliados" }}
@@ -56,6 +57,11 @@ export default function App() {
             name="PerfilVendedor"
             options={{ ...headerOptions, title: "Perfil do Vendedor" }}
             component={PerfilVendedor}
+          />
+          <Stack.Screen
+            name="Produtos"
+            options={{ ...headerOptions, title: "Produtos Afiliados" }}
+            component={Produtos}
           />
           <Stack.Screen
             name="PerfilAfiliado"

@@ -10,18 +10,21 @@ export const styles = StyleSheet.create({
   card: {
     width: "90%",
     marginTop: 25,
-    alignSelf: "center",
+    alignSelf: "center"
+    
   },
   imagem: {
-    alignSelf: "center",
-  },
-  titulos: {
-    fontWeight: "bold",
+    width: 15,
+    height: 15
   },
   cover: {
     width: 150,
     height: 150,
     justifyContent: "center",
     alignSelf: "center",
+  },
+  titulos: {
+    fontWeight: "bold",
+   
   },
 });
