@@ -53,7 +53,7 @@ export default function MeusAfiliados({ navigation }) {
                     <Paragraph style={styles.titleSize}>
                       2.000 visualizções{"\n "} {"\n "}
                       1.053 cliques {"\n "} {"\n "}
-                      647 na página de compra {"\n "} {"\n "}
+                      647 na página de compra {"\n "}
                       240 compras com {"\n "} sucesso
                     </Paragraph>
                   </DataTable.Row>

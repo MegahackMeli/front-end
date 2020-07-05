@@ -4,10 +4,11 @@ import { Avatar, Card, Title, Paragraph, Button } from "react-native-paper";
 import { ScrollView, View, Image, Text } from "react-native";
 import filter from "../../images/filter.png";
 import luisa from "../../images/luisa.png";
-import PerfilRank from "../../components/perfilRanking"
+import PerfilRank from "../../components/perfilRanking";
 import Podium from "../../images/podium.png";
+import { ranking } from "./ranking";
 
-export default function Ranking({navigation}) {
+export default function Ranking({ navigation }) {
   return (
     <ScrollView
       style={styles.container}
@@ -16,25 +17,43 @@ export default function Ranking({navigation}) {
       <View style={styles.text}>
         <Image source={Podium} style={styles.itensImagem} />
         <Title style={styles.title}>Ranking de Afiliados</Title>
-        <Paragraph style={styles.paragraph}>Veja os melhores afiliados da nossa plataforma e peça a eles para divulgar o seu produto!</Paragraph>
+        <Paragraph style={styles.paragraph}>
+          Veja os melhores afiliados da nossa plataforma e peça a eles para
+          divulgar o seu produto!
+        </Paragraph>
       </View>
-      
+
       <Card style={styles.card}>
-        
         <Card.Actions style={styles.cardContent}>
-            <Button> <Image source={filter} style={styles.tinyLogo}/> </Button>
-            <Button > <Text style={{ fontSize: 10 }}>Categoria</Text>  </Button>
-            <Button > <Text style={{ fontSize: 10 }}>Cronologia</Text> </Button>
-            <Button > <Text style={{ fontSize: 10 }}>Avaliação</Text> </Button>
-          
+          <Button>
+            {" "}
+            <Image source={filter} style={styles.tinyLogo} />{" "}
+          </Button>
+          <Button>
+            {" "}
+            <Text style={{ fontSize: 10 }}>Categoria</Text>{" "}
+          </Button>
+          <Button>
+            {" "}
+            <Text style={{ fontSize: 10 }}>Cronologia</Text>{" "}
+          </Button>
+          <Button>
+            {" "}
+            <Text style={{ fontSize: 10 }}>Avaliação</Text>{" "}
+          </Button>
         </Card.Actions>
-        
       </Card>
-      <PerfilRank img={luisa} nome={"Luísa Moraes Lopes"} vendas={"33 vendas afiliadas"} rating={4.8} navigation={navigation}/> 
-      <PerfilRank img={luisa} nome={"Luísa Moraes Lopes"} vendas={"30 vendas afiliadas"} rating={4.9} navigation={navigation}/> 
-      <PerfilRank img={luisa} nome={"Luísa Moraes Lopes"} vendas={"28 vendas afiliadas"} rating={4.5} navigation={navigation}/> 
-      <PerfilRank img={luisa} nome={"Luísa Moraes Lopes"} vendas={"20 vendas afiliadas"} rating={4.0} navigation={navigation}/> 
-      
+
+      {ranking.map((x) => (
+        <PerfilRank
+          key={x.nome}
+          img={luisa}
+          nome={x.nome}
+          vendas={x.vendas}
+          rating={x.rating}
+          navigation={navigation}
+        />
+      ))}
     </ScrollView>
   );
 }

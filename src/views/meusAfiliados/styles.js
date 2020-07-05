@@ -33,7 +33,7 @@ export const styles = StyleSheet.create({
     marginRight: 10,
   },
   titleSize: {
-    fontSize: 15,
+    fontSize: 13,
     color: "#1D2C7C",
     fontWeight: "bold",
   },

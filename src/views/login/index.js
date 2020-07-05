@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Image, KeyboardAvoidingView } from "react-native";
+import { View, Image, KeyboardAvoidingView, Text } from "react-native";
 import { styles } from "./styles";
 import { TextInput, Button } from "react-native-paper";
 import ImagemLogo from "../../images/logo.png";
@@ -32,6 +32,13 @@ export default function Login({ navigation }) {
         secureTextEntry
         mode="outlined"
       />
+
+      <Button
+        onPress={() => navigation.navigate("Cadastro")}
+        style={styles.cadastre}
+      >
+        Não tem uma conta ? Cadastre-se
+      </Button>
 
       <View style={styles.containerButton}>
         <Button

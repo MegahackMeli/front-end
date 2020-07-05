@@ -27,7 +27,16 @@ export const styles = StyleSheet.create({
     marginLeft: "3%",
   },
 
-  text:{
-    color: '#1D2C7C'
+  text: {
+    color: "#1D2C7C",
+  },
+
+  cadastre: {
+    marginTop: 20,
+  },
+
+  textCadastre: {
+    fontWeight: "bold",
+    color: "#1D2C7C",
   },
 });
