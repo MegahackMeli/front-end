@@ -29,9 +29,7 @@ export default function Produto() {
     }
   }
 
-  const [visible, setVisible] = React.useState(false);
-
-  const onToggleSnackBar = () => setVisible(!visible);
+  const [visible, setVisible] = useState(false);
 
   const onDismissSnackBar = () => setVisible(false);
 
@@ -108,25 +106,24 @@ export default function Produto() {
                   <Button
                     style={styles.buttonShare}
                     mode="contained"
-                    onPress={onToggleSnackBar}>
-                  
+                    onPress={() => {
+                      setVisible(true);
+                      Clipboard.setString(
+                        "Ei, se liga nesse produto do Meli: " + prod.link
+                      );
+                    }}
+                  >
                     <Icon name="share" size={15} />
                   </Button>
-                  <Snackbar
-                    visible={visible}
-                    onDismiss={onDismissSnackBar}
-                    
-                    >
-                    <Text>Copiado</Text>
-                  </Snackbar>
-                  
-                  
                 </Card.Content>
                 <Text style={styles.link}> {prod.link} </Text>
               </View>
             </Card>
           ))}
         </ScrollView>
+        <Snackbar visible={visible} onDismiss={onDismissSnackBar}>
+          <Text>Link copiado!</Text>
+        </Snackbar>
       </View>
     </>
   );
