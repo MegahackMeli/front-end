@@ -1,20 +1,20 @@
 export const data = {
   afiliados: [
-    {
-      nome: "Mariana Sales",
-      vendasInfluenciadas: 20,
-      visualizacoes: 2000,
-      cliques: 859,
-      acessos: 730,
-      compras: 120,
-      totalComissao: 30,
-      produtos: [
-        {
-          nome: "iPhone 11",
-          link: "www.mercadolivre.com/productID17865",
-        },
-      ],
-    },
+    // {
+    //   nome: "Mariana Sales",
+    //   vendasInfluenciadas: 20,
+    //   visualizacoes: 2000,
+    //   cliques: 859,
+    //   acessos: 730,
+    //   compras: 120,
+    //   totalComissao: 30,
+    //   produtos: [
+    //     {
+    //       nome: "iPhone 11",
+    //       link: "www.mercadolivre.com/productID17865",
+    //     },
+    //   ],
+    // },
     {
       nome: "Eduardo Menezes",
       vendasInfluenciadas: 20,
