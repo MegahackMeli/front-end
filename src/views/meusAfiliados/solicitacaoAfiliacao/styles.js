@@ -6,11 +6,12 @@ export const styles = StyleSheet.create({
   },
   contentContainerStyle: {
     paddingBottom: 40,
-    paddingTop: 40,
+    paddingTop: 30,
   },
   card: {
     width: "90%",
     alignSelf: "center",
+    marginTop: 10
   },
   cardContent: {
     flexDirection: "row",

@@ -10,10 +10,9 @@ export const styles = StyleSheet.create({
   },
 
   card: {
-    width: "29%",
-    marginTop: 10,
+    width: "90%",
+    margin: 25,
     alignSelf: "center",
-    marginHorizontal: 5,
   },
 
   resumo: {
