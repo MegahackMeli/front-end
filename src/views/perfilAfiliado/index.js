@@ -64,7 +64,21 @@ export default function Perfil({ navigation }) {
       <View style={styles.viewRow}>
         <Card
           style={styles.card}
-          onPress={() => Linking.openURL("mercadopago://app")}
+          onPress={() => {
+            if (Platform.OS === "ios") {
+              Linking.openURL("mercadopago://app").catch((err) => {
+                Linking.openURL(
+                  "https://apps.apple.com/br/app/mercado-pago/id925436649"
+                );
+              });
+            } else {
+              Linking.openURL("mercadopago://app").catch((err) => {
+                Linking.openURL(
+                  "https://play.google.com/store/apps/details?id=com.mercadopago.wallet&hl=pt_BR"
+                );
+              });
+            }
+          }}
         >
           <View style={styles.notification}>
             <Image source={pago} style={styles.imgCardPago} />
