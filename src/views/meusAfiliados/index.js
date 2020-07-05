@@ -5,7 +5,7 @@ import { data } from "./afiliados";
 import { styles } from "./styles";
 import InviteImagem from "../../images/invite.png";
 import ImagemEduardo from "../../images/eduardo.png";
-
+import range from "../../images/range.png";
 export default function MeusAfiliados({ navigation }) {
   const { afiliados, solicitacoes } = data;
 
@@ -46,13 +46,26 @@ export default function MeusAfiliados({ navigation }) {
               ))}
             </DataTable>
             <View>
-              <Paragraph>- {x.visualizacoes} visualizações</Paragraph>
+              <Card>
+                <Card.Content>
+                  <DataTable.Row>
+                    <Image source={range} style={styles.imgRange} />
+                    <Paragraph style={styles.titleSize}>
+                      2.000 visualizções{"\n "} {"\n "}
+                      1.053 cliques {"\n "} {"\n "}
+                      647 na página de compra {"\n "} {"\n "}
+                      240 compras com {"\n "} sucesso
+                    </Paragraph>
+                  </DataTable.Row>
+                </Card.Content>
+              </Card>
+              {/* <Paragraph>- {x.visualizacoes} visualizações</Paragraph>
               <Paragraph>- {x.cliques} cliques</Paragraph>
               <Paragraph>- {x.acessos} na página de compra</Paragraph>
               <Paragraph>- {x.compras} compras com sucesso</Paragraph>
               <Paragraph>
                 - Total em comissão pago: R$ {x.totalComissao}
-              </Paragraph>
+              </Paragraph> */}
             </View>
           </Card.Content>
         </Card>

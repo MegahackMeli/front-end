@@ -25,4 +25,16 @@ export const styles = StyleSheet.create({
     alignSelf: "center",
     paddingLeft: 30,
   },
+  imgRange: {
+    width: 115,
+    height: 130,
+    margin: 1,
+    marginLeft: -25,
+    marginRight: 10,
+  },
+  titleSize: {
+    fontSize: 15,
+    color: "#1D2C7C",
+    fontWeight: "bold",
+  },
 });
