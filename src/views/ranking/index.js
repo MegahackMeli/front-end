@@ -7,7 +7,7 @@ import luisa from "../../images/luisa.png";
 import PerfilRank from "../../components/perfilRanking"
 import Podium from "../../images/podium.png";
 
-export default function Ranking() {
+export default function Ranking({navigation}) {
   return (
     <ScrollView
       style={styles.container}
@@ -30,10 +30,10 @@ export default function Ranking() {
         </Card.Actions>
         
       </Card>
-      <PerfilRank img={luisa} nome={"Luísa Moraes Lopes"} vendas={"33 vendas afiliadas"} rating={4.8}/> 
-      <PerfilRank img={luisa} nome={"Luísa Moraes Lopes"} vendas={"30 vendas afiliadas"} rating={4.9}/> 
-      <PerfilRank img={luisa} nome={"Luísa Moraes Lopes"} vendas={"28 vendas afiliadas"} rating={4.5}/> 
-      <PerfilRank img={luisa} nome={"Luísa Moraes Lopes"} vendas={"20 vendas afiliadas"} rating={4.0}/> 
+      <PerfilRank img={luisa} nome={"Luísa Moraes Lopes"} vendas={"33 vendas afiliadas"} rating={4.8} navigation={navigation}/> 
+      <PerfilRank img={luisa} nome={"Luísa Moraes Lopes"} vendas={"30 vendas afiliadas"} rating={4.9} navigation={navigation}/> 
+      <PerfilRank img={luisa} nome={"Luísa Moraes Lopes"} vendas={"28 vendas afiliadas"} rating={4.5} navigation={navigation}/> 
+      <PerfilRank img={luisa} nome={"Luísa Moraes Lopes"} vendas={"20 vendas afiliadas"} rating={4.0} navigation={navigation}/> 
       
     </ScrollView>
   );

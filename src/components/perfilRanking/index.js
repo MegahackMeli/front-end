@@ -4,12 +4,14 @@ import { Card, Paragraph } from "react-native-paper";
 import { ScrollView, View, Image } from "react-native";
 import StarRating from 'react-native-star-rating';
 
-export default function PerfilRank({img, vendas, nome, rating}) {
+export default function PerfilRank({img, vendas, nome, rating, navigation}) {
   return (
     <ScrollView
       style={styles.container}
     >
-      <Card style={styles.card}>
+      <Card style={styles.card}
+        onPress={() => navigation.navigate("PerfilAfiliadoRanking")}
+      >
         
         <Card.Content style={styles.cardContent}>
           <View>
