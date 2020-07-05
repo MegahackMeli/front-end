@@ -113,7 +113,7 @@ export default function App() {
           />
           <Stack.Screen
             name="PerfilAfiliadoRanking"
-            options={{ ...headerOptions, title: "PerfilAfiliadoRanking" }}
+            options={{ ...headerOptions, title: "Perfil do Afiliado" }}
             component={PerfilAfiliadoRanking}
           />
         </Stack.Navigator>
