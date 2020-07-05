@@ -13,6 +13,8 @@ import { data } from "./afiliados";
 import ImagemLuisa from "../../images/luisa.png";
 import ImagemSucesso from "../../images/sucesso.png";
 import range from "../../images/range.png";
+import StarRating from 'react-native-star-rating';
+
 
 export default function PerfilAfiliadoRanking() {
   const { solicitacoes } = data;
@@ -58,7 +60,16 @@ export default function PerfilAfiliadoRanking() {
                   <Text style={styles.text}>
                     {x.vendasInfluenciadas} vendas influênciadas
                   </Text>
-                  <Text>Rating: {x.rating}</Text>
+                  <View style={{flexDirection: 'row'}}>
+                  <StarRating
+                    disabled={true}
+                    maxStars={5}
+                    rating={x.rating}
+                    fullStarColor={"#1D2C7C"}
+                    starSize={25}
+                  />
+                  <Text style={{fontSize:16}}>  {x.rating}</Text>
+                  </View>
                 </View>
               </View>
               <View style={styles.header}>
@@ -88,7 +99,7 @@ export default function PerfilAfiliadoRanking() {
                 style={{ ...styles.form, ...styles.buttonAcessar }}
                 onPress={showDialog}
               >
-                Aceitar
+                Solicitar Afiliação
               </Button>
             </Card.Actions>
           </Card>
