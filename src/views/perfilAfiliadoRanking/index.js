@@ -83,8 +83,13 @@ export default function PerfilAfiliadoRanking() {
               </View>
             </Card.Content>
             <Card.Actions style={styles.actions}>
-              <Button onPress={showDialog}>Aceitar</Button>
-              <Button>Recusar</Button>
+              <Button
+                mode="contained"
+                style={{ ...styles.form, ...styles.buttonAcessar }}
+                onPress={showDialog}
+              >
+                Aceitar
+              </Button>
             </Card.Actions>
           </Card>
         ))}
