@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, ScrollView, Image, Clipboard } from "react-native";
-import { TextInput } from "react-native-paper";
+import { TextInput, Snackbar } from "react-native-paper";
 import { styles } from "./styles";
 import share from "../../images/share.png";
 import StarRating from "react-native-star-rating";
@@ -28,6 +28,12 @@ export default function Produto() {
       );
     }
   }
+
+  const [visible, setVisible] = React.useState(false);
+
+  const onToggleSnackBar = () => setVisible(!visible);
+
+  const onDismissSnackBar = () => setVisible(false);
 
   return (
     <>
@@ -102,14 +108,19 @@ export default function Produto() {
                   <Button
                     style={styles.buttonShare}
                     mode="contained"
-                    onPress={() => {
-                      Clipboard.setString(
-                        "Hey, veja só esse produto do Meli: " + prod.link
-                      );
-                    }}
-                  >
+                    onPress={onToggleSnackBar}>
+                  
                     <Icon name="share" size={15} />
                   </Button>
+                  <Snackbar
+                    visible={visible}
+                    onDismiss={onDismissSnackBar}
+                    
+                    >
+                    <Text>Copiado</Text>
+                  </Snackbar>
+                  
+                  
                 </Card.Content>
                 <Text style={styles.link}> {prod.link} </Text>
               </View>

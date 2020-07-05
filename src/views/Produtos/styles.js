@@ -21,6 +21,8 @@ export const styles = StyleSheet.create({
     color: "#1D2C7C",
     fontWeight: "bold",
   },
+
+
   link: {
     justifyContent: "center",
     alignSelf: "center",
