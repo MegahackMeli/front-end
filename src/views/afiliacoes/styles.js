@@ -22,6 +22,7 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     color: "#1D2C7C",
     fontWeight: "bold",
+    width: "45%",
   },
 
   link: {
@@ -54,5 +55,8 @@ export const styles = StyleSheet.create({
   },
   scrollView: {
     marginTop: 15,
+  },
+  containerLoading: {
+    marginTop: "60%",
   },
 });

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, ScrollView, Image } from "react-native";
+import { View, Text, ScrollView, Image, Dimensions } from "react-native";
 import {
   Card,
   Button,
@@ -14,8 +14,22 @@ import ImagemLuisa from "../../../images/luisa.png";
 import ImagemSucesso from "../../../images/sucesso.png";
 import range from "../../../images/range.png";
 import StarRating from 'react-native-star-rating';
+import {
+  BarChart,
+} from "react-native-chart-kit";
 
 export default function SolicitacaoAfiliacao() {
+  const dataPlot = {
+    labels: ["Visualizações", "Cliques", "No Carinho", "Compras" ],
+    datasets: [
+      {
+        data: [2000, 1053, 647, 240]
+      }
+    ]
+  };
+
+  var plotDim = Dimensions.get('window').width * 0.9
+
   const { solicitacoes } = data;
 
   const [visible, setVisible] = useState(false);
@@ -99,21 +113,33 @@ export default function SolicitacaoAfiliacao() {
             </Card.Actions>
           </Card>
         ))}
-        <View style={styles.resumo}>
-          <Card>
-            <Card.Content>
-              <DataTable.Row>
-                <Image source={range} style={styles.imgRange} />
-                <Paragraph style={styles.titleSize}>
-                  2.000 visualizções{"\n "} {"\n "}
-                  1.053 cliques {"\n "} {"\n "}
-                  647 na página de compra {"\n "} {"\n "}
-                  240 compras com {"\n "} sucesso
-                </Paragraph>
-              </DataTable.Row>
-            </Card.Content>
-          </Card>
-        </View>
+        
+        <Card style={styles.card}>
+   
+        <BarChart
+        data={dataPlot}
+        width={plotDim}
+        height={220}
+        
+        chartConfig={{
+          backgroundColor: "#FFF159",
+          backgroundGradientFrom: "#fff",
+          backgroundGradientTo: "#fff",
+          color: () => '#333',
+          
+          propsForBackgroundLines: {
+              strokeWidth: 0
+          },
+
+          fillShadowGradient: "#1D2C7C",
+          fillShadowGradientOpacity: 1, 
+        }}
+        
+        withHorizontalLabels={false}
+        showValuesOnTopOfBars={true}
+        />
+        
+        </Card>
       </ScrollView>
     </>
   );

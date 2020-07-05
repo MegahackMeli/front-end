@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, ScrollView, Image } from "react-native";
 import { TextInput } from "react-native-paper";
-import { produtos } from "./produtos";
 import { styles } from "./styles";
 import share from "../../images/share.png";
 import StarRating from "react-native-star-rating";
 import Icon from "react-native-vector-icons/Fontisto";
+import { produtos } from "./produtos";
 
 import {
   Avatar,

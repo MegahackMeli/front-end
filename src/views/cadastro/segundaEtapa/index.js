@@ -17,15 +17,18 @@ export default function SegundaEtapa() {
             onValueChange={(value) => setPossuiConta(value)}
             value={possuiConta}
           >
-            <View>
-              <Text>Não</Text>
-              <RadioButton value="não" />
-            </View>
-            <View>
-              <Text>Sim</Text>
-              <RadioButton value="sim" />
+            <View style={styles.radio}>
+              
+                <Text>Não</Text>
+                <RadioButton value="não" />
+             
+              
+                <Text>Sim</Text>
+                <RadioButton value="sim" />
+              
             </View>
           </RadioButton.Group>
+          
         </View>
       </View>
 

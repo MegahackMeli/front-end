@@ -1,32 +1,32 @@
 import React, { useState } from "react";
-import { View, Image, ScrollView } from "react-native";
+import { View, Image, ScrollView, Dimensions } from "react-native";
 import { styles } from "./styles";
 import { Text, Paragraph, Card, Title, DataTable } from "react-native-paper";
 import sad from "../../images/sad.png";
 import range from "../../images/range.png";
+import {
+  BarChart,
+} from "react-native-chart-kit";
 
-export default function Perfil() {
+export default function Estatistica() {
+
+  const data = {
+    labels: ["Visualizações", "Cliques", "No Carinho", "Compras" ],
+    datasets: [
+      {
+        data: [2000, 1053, 647, 240]
+      }
+    ]
+  };
+
+  var plotDim = Dimensions.get('window').width * 0.9
+
   return (
     <ScrollView
       style={styles.container}
       behavior={Platform.OS === "ios" ? "padding" : undefined}
     >
-      <View style={styles.resumo}>
-        <Card>
-          <Card.Content>
-            <DataTable.Row>
-              <Image source={range} style={styles.imgRange} />
-              <Paragraph style={styles.titleSize}>
-                2.000 visualizções{"\n "} {"\n "}
-                1.053 cliques {"\n "} {"\n "}
-                647 na página de compra {"\n "} {"\n "}
-                240 compras com {"\n "} sucesso
-              </Paragraph>
-            </DataTable.Row>
-          </Card.Content>
-        </Card>
-      </View>
-
+      
       <View style={styles.resumo}>
         <Card>
           <Card.Content>
@@ -72,6 +72,38 @@ export default function Perfil() {
           </Card.Content>
         </Card>
       </View>
+      <Card style={styles.card}>
+   
+      <BarChart
+      data={data}
+      width={plotDim}
+      height={220}
+      
+      chartConfig={{
+        backgroundColor: "#FFF159",
+        backgroundGradientFrom: "#fff",
+        backgroundGradientTo: "#fff",
+        color: () => '#333',
+        
+        propsForBackgroundLines: {
+            strokeWidth: 0
+        },
+
+        fillShadowGradient: "#1D2C7C",
+        fillShadowGradientOpacity: 1, 
+      }}
+      
+      withHorizontalLabels={false}
+      showValuesOnTopOfBars={true}
+      />
+     
+      </Card>
     </ScrollView>
+
+    
   );
+  
+  
+  
 }
+

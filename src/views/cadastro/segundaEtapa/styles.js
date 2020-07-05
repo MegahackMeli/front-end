@@ -11,4 +11,10 @@ export const styles = StyleSheet.create({
   radioGroup: {
     marginTop: 15,
   },
+  radio:{
+    flexDirection: "row", 
+    justifyContent:"center", 
+    alignItems:"center"
+  },
+  
 });
