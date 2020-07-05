@@ -76,7 +76,7 @@ export default function Perfil({ navigation }) {
             } else {
               Linking.openURL("mercadopago://app").catch((err) => {
                 Linking.openURL(
-                  "https://play.google.com/store/apps/details?id=com.mercadolibre&hl=pt_BR"
+                  "https://play.google.com/store/apps/details?id=com.mercadopago.wallet&hl=pt_BR"
                 );
               });
             }
