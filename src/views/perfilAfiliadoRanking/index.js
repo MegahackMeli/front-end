@@ -9,10 +9,10 @@ import {
   DataTable,
 } from "react-native-paper";
 import { styles } from "./styles";
-import { data } from "../afiliados";
-import ImagemLuisa from "../../../images/luisa.png";
-import ImagemSucesso from "../../../images/sucesso.png";
-import range from "../../../images/range.png";
+import { data } from "./afiliados";
+import ImagemLuisa from "../../images/luisa.png";
+import ImagemSucesso from "../../images/sucesso.png";
+import range from "../../images/range.png";
 
 export default function PerfilAfiliadoRanking() {
   const { solicitacoes } = data;
@@ -29,8 +29,8 @@ export default function PerfilAfiliadoRanking() {
           <Dialog.Content>
             <Image source={ImagemSucesso} style={styles.center} />
             <Paragraph>
-              A solicitação foi aceita, agora Luisa pode divulgar seus produtos
-              e aumentar seu número de vendas!
+              A solicitação de divulgação enviada, acompanhe e a resposta do
+              afiliado através do painel de solicitação.
             </Paragraph>
           </Dialog.Content>
           <Dialog.Actions>
