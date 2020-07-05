@@ -16,6 +16,7 @@ import Estatisticas from "./src/views/estatisitica";
 import Ranking from "./src/views/ranking";
 import MeusAfiliados from "./src/views/meusAfiliados";
 import SolicitacaoAfiliacao from "./src/views/meusAfiliados/solicitacaoAfiliacao";
+import PerfilAfiliadoRanking from "./src/views/PerfilAfiliadoRanking";
 
 const headerOptions = {
   headerStyle: {
@@ -49,7 +50,6 @@ export default function App() {
       }}
     >
       <NavigationContainer>
-
         <Stack.Navigator initialRouteName="Login">
           <Stack.Screen
             name="Ranking"
@@ -110,6 +110,11 @@ export default function App() {
             name="SolicitacaoAfiliacao"
             options={{ ...headerOptions, title: "Solicitações de afiliação" }}
             component={SolicitacaoAfiliacao}
+          />
+          <Stack.Screen
+            name="PerfilAfiliadoRanking"
+            options={{ ...headerOptions, title: "Ranking de Afiliados" }}
+            component={PerfilAfiliadoRanking}
           />
         </Stack.Navigator>
       </NavigationContainer>
